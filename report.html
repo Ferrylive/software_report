@@ -391,6 +391,8 @@
       margin: 0 auto;
       display: block;
       overflow: visible;
+      padding: 0 10px;
+      box-sizing: border-box;
     }
     @media (max-width: 768px) {
       .cover-radar .radar-chart svg {
@@ -3639,7 +3641,7 @@
       <!-- 雷达图 - 6个健康维度 -->
       <div class="cover-radar">
         <div class="radar-chart">
-          <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 500 500" style="overflow: visible;">
+          <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="-80 -50 560 500" style="overflow: visible;">
             <defs>
               <style>
                 .radar-grid { stroke: var(--brand-green); stroke-width: 1; fill: none; opacity: 0.3; }
@@ -3671,13 +3673,13 @@
             <circle cx="200" cy="320" r="4" class="radar-point"/>
             <circle cx="80" cy="260" r="4" class="radar-point"/>
             <circle cx="80" cy="140" r="4" class="radar-point"/>
-            <!-- 标签 - 调整位置避免被遮挡 -->
+            <!-- 标签 - 调整位置避免超出框 -->
             <text x="200" y="15" text-anchor="middle" class="radar-label">牙齿颜色</text>
-            <text x="420" y="140" text-anchor="middle" class="radar-label">牙体健康</text>
-            <text x="420" y="275" text-anchor="middle" class="radar-label">牙周健康</text>
+            <text x="400" y="140" text-anchor="middle" class="radar-label">牙体健康</text>
+            <text x="400" y="275" text-anchor="middle" class="radar-label">牙周健康</text>
             <text x="200" y="385" text-anchor="middle" class="radar-label">牙列整齐</text>
-            <text x="-20" y="275" text-anchor="middle" class="radar-label">牙列完整</text>
-            <text x="-20" y="140" text-anchor="middle" class="radar-label">口腔卫生</text>
+            <text x="0" y="275" text-anchor="middle" class="radar-label">牙列完整</text>
+            <text x="0" y="140" text-anchor="middle" class="radar-label">口腔卫生</text>
             <!-- 数值 (0-100分) -->
             <text x="200" y="65" text-anchor="middle" class="radar-value">75</text>
             <text x="340" y="125" text-anchor="middle" class="radar-value">70</text>
