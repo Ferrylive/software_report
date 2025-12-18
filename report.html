@@ -680,7 +680,7 @@
       max-width: 100%; 
       margin: 0; 
       background: transparent; 
-      padding: 0; 
+      padding: 20px 0; 
       border: none; 
       box-shadow: none;
       overflow: visible;
@@ -695,18 +695,21 @@
       width: 100%;
       max-width: 100%;
       margin: 0 auto;
-      padding: 10px 5px;
+      padding: 20px 5px;
+      overflow: visible;
     }
     @media (max-width: 768px) {
       .tooth-arch-container {
         gap: 20px;
-        padding: 8px 3px;
+        padding: 20px 3px;
+        overflow: visible;
       }
     }
     @media (max-width: 480px) {
       .tooth-arch-container {
         gap: 15px;
-        padding: 5px 2px;
+        padding: 20px 2px;
+        overflow: visible;
       }
     }
     .tooth-arch-section {
@@ -736,6 +739,18 @@
       height: auto;
       max-width: 100%;
       overflow: visible;
+      display: block;
+      min-height: 300px;
+    }
+    @media (max-width: 768px) {
+      .tooth-arch-svg {
+        min-height: 250px;
+      }
+    }
+    @media (max-width: 480px) {
+      .tooth-arch-svg {
+        min-height: 200px;
+      }
     }
     /* SVG牙齿样式 */
     .tooth-shape {
@@ -2764,7 +2779,7 @@
       const lowerTeeth = ['48', '47', '46', '45', '44', '43', '42', '41', '31', '32', '33', '34', '35', '36', '37', '38'];
 
       // 生成上颌SVG (U型布局 - 超大画布，间距特别优化)
-      let upperSvg = '<svg class="tooth-arch-svg" viewBox="0 0 1100 600" xmlns="http://www.w3.org/2000/svg">';
+      let upperSvg = '<svg class="tooth-arch-svg" viewBox="0 -40 1100 650" xmlns="http://www.w3.org/2000/svg">';
       
       // 牙弓曲线已移除
       
@@ -2839,7 +2854,7 @@
       upperSvg += '</svg>';
 
       // 生成下颌SVG (U型布局 - 超大画布，间距特别优化)
-      let lowerSvg = '<svg class="tooth-arch-svg" viewBox="0 0 1100 600" xmlns="http://www.w3.org/2000/svg">';
+      let lowerSvg = '<svg class="tooth-arch-svg" viewBox="0 -40 1100 650" xmlns="http://www.w3.org/2000/svg">';
       
       // 牙弓曲线已移除
       
@@ -2975,7 +2990,7 @@
       const lowerTeeth = ['48', '47', '46', '45', '44', '43', '42', '41', '31', '32', '33', '34', '35', '36', '37', '38'];
 
       // 生成上颌SVG (U型布局 - 超大画布，间距特别优化)
-      let upperSvg = '<svg class="tooth-arch-svg" viewBox="0 0 1100 600" xmlns="http://www.w3.org/2000/svg">';
+      let upperSvg = '<svg class="tooth-arch-svg" viewBox="0 -40 1100 650" xmlns="http://www.w3.org/2000/svg">';
       // 牙弓曲线已移除
       
       const upperPositions = [
@@ -3011,7 +3026,7 @@
       upperSvg += '</svg>';
 
       // 生成下颌SVG (U型布局 - 超大画布，间距特别优化)
-      let lowerSvg = '<svg class="tooth-arch-svg" viewBox="0 0 1100 600" xmlns="http://www.w3.org/2000/svg">';
+      let lowerSvg = '<svg class="tooth-arch-svg" viewBox="0 -40 1100 650" xmlns="http://www.w3.org/2000/svg">';
       // 牙弓曲线已移除
       
       const lowerPositions = [
