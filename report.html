@@ -3072,6 +3072,10 @@
         return;
       }
       
+      // 检查是否是牙齿问题分布图容器
+      const isProblemChart = container.id === 'toothChartContainer' || 
+                             container.closest('#toothChartContainer') !== null;
+      
       const items = container.querySelectorAll('.tooth-item');
       console.log('设置牙齿提示，找到', items.length, '个牙齿');
       
@@ -3084,7 +3088,13 @@
         item.addEventListener('click', function(e) {
           e.stopPropagation();
           
-          // 检查是否在图模式下
+          // 牙齿问题分布图：始终打开详情页面
+          if (isProblemChart) {
+            showToothDetail(toothNum);
+            return;
+          }
+          
+          // 其他图表：检查是否在图模式下
           if (document.body.classList.contains('image-mode')) {
             // 图模式：显示详情弹窗
             showToothDetail(toothNum);
