@@ -2766,17 +2766,16 @@
       // 生成上颌SVG (U型布局 - 超大画布，间距特别优化)
       let upperSvg = '<svg class="tooth-arch-svg" viewBox="0 0 1100 600" xmlns="http://www.w3.org/2000/svg">';
       
-      // 绘制上颌牙弓曲线（U型曲线：根据实际牙齿位置调整）
-      upperSvg += '<path d="M 110 550 Q 110 100 220 65 Q 400 40 550 40 Q 700 40 880 65 Q 990 100 990 550" stroke="var(--border-color)" stroke-width="3" fill="none" stroke-dasharray="8,5" opacity="0.4"/>';
+      // 牙弓曲线已移除
       
         // 上颌牙齿位置（根据下颌对称，上下翻转）
         const upperPositions = [
           // 右侧 18-11 (从后向前，与下颌上下对称)
-          {x: 130, y: 540}, {x: 145, y: 420}, {x: 160, y: 310}, {x: 190, y: 210},
-          {x: 245, y: 120}, {x: 325, y: 90}, {x: 410, y: 65}, {x: 490, y: 65},
+          {x: 130, y: 560}, {x: 145, y: 460}, {x: 160, y: 360}, {x: 180, y: 260},
+          {x: 225, y: 170}, {x: 305, y: 95}, {x: 390, y: 40}, {x: 490, y: 10},
           // 左侧 21-28 (从前向后，完全镜像对称)
-          {x: 610, y: 65}, {x: 690, y: 65}, {x: 775, y: 90}, {x: 855, y: 120},
-          {x: 910, y: 210}, {x: 940, y: 310}, {x: 955, y: 420}, {x: 970, y: 540}
+          {x: 610, y: 10}, {x: 710, y: 40}, {x: 795, y: 95}, {x: 875, y: 170},
+          {x: 920, y: 260}, {x: 940, y: 360}, {x: 955, y: 460}, {x: 970, y: 560}
         ];
       
       upperTeeth.forEach((fdi, index) => {
@@ -2842,17 +2841,16 @@
       // 生成下颌SVG (U型布局 - 超大画布，间距特别优化)
       let lowerSvg = '<svg class="tooth-arch-svg" viewBox="0 0 1100 600" xmlns="http://www.w3.org/2000/svg">';
       
-      // 绘制下颌牙弓曲线（U型曲线：根据实际牙齿位置调整）
-      lowerSvg += '<path d="M 110 50 Q 110 500 220 535 Q 400 560 550 560 Q 700 560 880 535 Q 990 500 990 50" stroke="var(--border-color)" stroke-width="3" fill="none" stroke-dasharray="8,5" opacity="0.4"/>';
+      // 牙弓曲线已移除
       
         // 下颌牙齿位置（侧后牙纵向排列，中切牙间距优化）
         const lowerPositions = [
-          // 右侧 48-41 (从后向前，垂直间距90-100px)
-          {x: 130, y: 60}, {x: 145, y: 180}, {x: 160, y: 290}, {x: 190, y: 390},
-            {x: 245, y: 480}, {x: 325, y: 510}, {x: 410, y: 535}, {x: 490, y: 535},
-            // 左侧 31-38 (从前向后，完全镜像对称)
-            {x: 610, y: 535}, {x: 690, y: 535}, {x: 775, y: 510}, {x: 855, y: 480},
-            {x: 910, y: 390}, {x: 940, y: 290}, {x: 955, y: 180}, {x: 970, y: 60}
+          // 右侧 48-41 (与上颌11-18上下对称)
+          {x: 130, y: 40}, {x: 145, y: 140}, {x: 160, y: 240}, {x: 180, y: 340},
+          {x: 225, y: 430}, {x: 305, y: 505}, {x: 390, y: 560}, {x: 490, y: 590},
+          // 左侧 31-38 (与上颌21-28上下对称)
+          {x: 610, y: 590}, {x: 710, y: 560}, {x: 795, y: 505}, {x: 875, y: 430},
+          {x: 920, y: 340}, {x: 940, y: 240}, {x: 955, y: 140}, {x: 970, y: 40}
         ];
       
       lowerTeeth.forEach((fdi, index) => {
@@ -2978,13 +2976,13 @@
 
       // 生成上颌SVG (U型布局 - 超大画布，间距特别优化)
       let upperSvg = '<svg class="tooth-arch-svg" viewBox="0 0 1100 600" xmlns="http://www.w3.org/2000/svg">';
-      upperSvg += '<path d="M 110 550 Q 110 100 220 65 Q 400 40 550 40 Q 700 40 880 65 Q 990 100 990 550" stroke="var(--border-color)" stroke-width="3" fill="none" stroke-dasharray="8,5" opacity="0.4"/>';
+      // 牙弓曲线已移除
       
       const upperPositions = [
-        {x: 130, y: 540}, {x: 145, y: 420}, {x: 160, y: 310}, {x: 190, y: 210},
-        {x: 245, y: 120}, {x: 325, y: 90}, {x: 410, y: 65}, {x: 490, y: 65},
-        {x: 610, y: 65}, {x: 690, y: 65}, {x: 775, y: 90}, {x: 855, y: 120},
-        {x: 910, y: 210}, {x: 940, y: 310}, {x: 955, y: 420}, {x: 970, y: 540}
+        {x: 130, y: 560}, {x: 145, y: 460}, {x: 160, y: 360}, {x: 180, y: 260},
+        {x: 225, y: 170}, {x: 305, y: 95}, {x: 390, y: 40}, {x: 490, y: 10},
+        {x: 610, y: 10}, {x: 710, y: 40}, {x: 795, y: 95}, {x: 875, y: 170},
+        {x: 920, y: 260}, {x: 940, y: 360}, {x: 955, y: 460}, {x: 970, y: 560}
       ];
       
       upperTeeth.forEach((fdi, index) => {
@@ -3014,13 +3012,13 @@
 
       // 生成下颌SVG (U型布局 - 超大画布，间距特别优化)
       let lowerSvg = '<svg class="tooth-arch-svg" viewBox="0 0 1100 600" xmlns="http://www.w3.org/2000/svg">';
-      lowerSvg += '<path d="M 110 50 Q 110 500 220 535 Q 400 560 550 560 Q 700 560 880 535 Q 990 500 990 50" stroke="var(--border-color)" stroke-width="3" fill="none" stroke-dasharray="8,5" opacity="0.4"/>';
+      // 牙弓曲线已移除
       
       const lowerPositions = [
-        {x: 130, y: 60}, {x: 145, y: 180}, {x: 160, y: 290}, {x: 190, y: 390},
-        {x: 245, y: 480}, {x: 325, y: 510}, {x: 410, y: 535}, {x: 490, y: 535},
-        {x: 610, y: 535}, {x: 690, y: 535}, {x: 775, y: 510}, {x: 855, y: 480},
-        {x: 910, y: 390}, {x: 940, y: 290}, {x: 955, y: 180}, {x: 970, y: 60}
+        {x: 130, y: 40}, {x: 145, y: 140}, {x: 160, y: 240}, {x: 180, y: 340},
+        {x: 225, y: 430}, {x: 305, y: 505}, {x: 390, y: 560}, {x: 490, y: 590},
+        {x: 610, y: 590}, {x: 710, y: 560}, {x: 795, y: 505}, {x: 875, y: 430},
+        {x: 920, y: 340}, {x: 940, y: 240}, {x: 955, y: 140}, {x: 970, y: 40}
       ];
       
       lowerTeeth.forEach((fdi, index) => {
@@ -3719,7 +3717,7 @@
         <!-- 动态生成的内容将插入这里 -->
         <div style="text-align: center; padding: 40px; color: var(--text-light);">加载中...</div>
       </div>
-      <p class="legend" style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: nowrap; margin-top: 12px;">
+      <p class="legend" style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: nowrap; margin-top: 20px; padding-top: 10px; position: relative; z-index: 10;">
         <span style="display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;">
           <svg width="20" height="15" style="vertical-align: middle;"><rect width="20" height="15" rx="2" fill="#E8F5E9" stroke="var(--brand-green)" stroke-width="2"/></svg>
           <span style="font-size: 13px; color: var(--text-medium);">正常</span>
